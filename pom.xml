@@ -35,9 +35,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/mrprintedwall/response-payloader.git</connection>
-        <developerConnection>scm:git:ssh://github.com/mrprintedwall/response-payloader.git</developerConnection>
-        <url>https://github.com/mrprintedwall/response-payloader.git/tree/master</url>
+        <connection>scm:git:git://github.com/johnpili/response-payloader.git</connection>
+        <developerConnection>scm:git:ssh://github.com/johnpili/response-payloader.git</developerConnection>
+        <url>https://github.com/johnpili/response-payloader.git/tree/master</url>
     </scm>
 
     <dependencies>
