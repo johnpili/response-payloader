@@ -16,7 +16,7 @@
 
     <name>Response Payloader</name>
     <description>A basic library for standardizing response payloads</description>
-    <url>https://github.com/mrprintedwall/response-payloader.git</url>
+    <url>https://github.com/johnpili/response-payloader.git</url>
 
     <licenses>
         <license>
