@@ -17,7 +17,7 @@ public class ResponsePayload<T> implements IResponsePayload<T>
 
 	public ResponsePayload()
 	{
-		this.total = 0;
+		this.total = -1;
 		this.reference = UUID.randomUUID().toString();
 		this.errors = new ArrayList<>();
 		this.timestamp = new DateTime().getMillis();
@@ -25,7 +25,7 @@ public class ResponsePayload<T> implements IResponsePayload<T>
 
 	public ResponsePayload(boolean success, T result, String reference, List<String> errors)
 	{
-		this.total = 0;
+		this.total = -1;
 		this.reference = (reference == null || reference.isEmpty()) ? UUID.randomUUID().toString() : reference;
 		this.success = success;
 		this.result = result;

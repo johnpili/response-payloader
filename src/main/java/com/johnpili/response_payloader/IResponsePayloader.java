@@ -49,4 +49,55 @@ public interface IResponsePayloader
 	 * @return
 	 */
 	<T> String generate(boolean success, T result, List<String> errors) throws JsonProcessingException;
+
+	/**
+	 * The basic response payload with prettify
+	 * @param success
+	 * @param result
+	 * @param prettify
+	 * @param <T>
+	 * @return
+	 * @throws JsonProcessingException
+	 */
+	<T> String generate(boolean success, T result, boolean prettify) throws JsonProcessingException;
+
+	/**
+	 * Primarily intended for list result with pagination payloads with prettify
+	 * @param success
+	 * @param result
+	 * @param total
+	 * @param prettify
+	 * @param <T>
+	 * @return
+	 * @throws JsonProcessingException
+	 */
+	<T> String generate(boolean success, T result, long total, boolean prettify) throws JsonProcessingException;
+
+	/**
+	 * Response payload with single error string with prettify
+	 * @param success
+	 * @param result
+	 * @param error
+	 * @param prettify
+	 * @param <T>
+	 * @return
+	 * @throws JsonProcessingException
+	 */
+	<T> String generate(boolean success, T result, String error, boolean prettify) throws JsonProcessingException;
+
+	/**
+	 * Response payload with list errors with prettify
+	 * @param success
+	 * @param result
+	 * @param errors
+	 * @param prettify
+	 * @param <T>
+	 * @return
+	 * @throws JsonProcessingException
+	 */
+	<T> String generate(boolean success, T result, List<String> errors, boolean prettify) throws JsonProcessingException;
+
+	<T> String jsonify(T obj) throws JsonProcessingException;
+
+	<T> String jsonify(T obj, boolean prettify) throws JsonProcessingException;
 }
