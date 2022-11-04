@@ -21,16 +21,6 @@ public interface IResponsePayloader
 	<T> String generate(boolean success, T result) throws JsonProcessingException;
 
 	/**
-	 * Primarily intended for list result with pagination payloads
-	 * @param success
-	 * @param result
-	 * @param total
-	 * @param <T>
-	 * @return
-	 */
-	<T> String generate(boolean success, T result, long total) throws JsonProcessingException;
-
-	/**
 	 * Response payload with single error string
 	 * @param success
 	 * @param result
@@ -60,18 +50,6 @@ public interface IResponsePayloader
 	 * @throws JsonProcessingException
 	 */
 	<T> String generate(boolean success, T result, boolean prettify) throws JsonProcessingException;
-
-	/**
-	 * Primarily intended for list result with pagination payloads with prettify
-	 * @param success
-	 * @param result
-	 * @param total
-	 * @param prettify
-	 * @param <T>
-	 * @return
-	 * @throws JsonProcessingException
-	 */
-	<T> String generate(boolean success, T result, long total, boolean prettify) throws JsonProcessingException;
 
 	/**
 	 * Response payload with single error string with prettify

@@ -3,34 +3,29 @@ package com.johnpili.response_payloader.models;
 import java.util.List;
 
 /**
+ * @param <T>
  * @author John Pilli
  * @since 2019-10-09
- * @param <T>
  */
 
-public interface IResponsePayload<T>
-{
-	String getReference();
+public interface IResponsePayload<T> {
+    String getReference();
 
-	void setReference(String reference);
+    void setReference(String reference);
 
-	long getTotal();
+    T getResult();
 
-	void setTotal(long total);
+    void setResult(T result);
 
-	T getResult();
+    List<String> getErrors();
 
-	void setResult(T result);
+    void setErrors(List<String> errors);
 
-	List<String> getErrors();
+    boolean isSuccess();
 
-	void setErrors(List<String> errors);
+    void setSuccess(boolean success);
 
-	boolean isSuccess();
+    void setTimestamp(long epoch);
 
-	void setSuccess(boolean success);
-
-	void setTimestamp(long epoch);
-
-	long getTimestamp();
+    long getTimestamp();
 }
